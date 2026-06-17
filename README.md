@@ -18,13 +18,13 @@ A production-grade web hosting control panel for Ubuntu Linux, similar to cPanel
 ## Quick Install
 
 ```bash
-curl -sSL https://get.novapanel.io/install.sh | bash
+bash <(curl -sSL https://raw.githubusercontent.com/lemuel1101/acdepanel/main/scripts/install.sh)
 ```
 
 Or build from source:
 
 ```bash
-git clone https://github.com/novapanel/novapanel.git
+git clone https://github.com/lemuel1101/acdepanel.git
 cd novapanel
 go build -o novapanel ./cmd/novapanel/
 go build -o novactl ./cmd/novactl/

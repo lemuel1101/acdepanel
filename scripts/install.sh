@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-NOVAPANEL_VERSION="v1.0.0"
-NOVAPANEL_REPO="https://github.com/novapanel/novapanel"
-NOVAPANEL_BINARY_URL="${NOVAPANEL_REPO}/releases/download/${NOVAPANEL_VERSION}/novapanel-linux-amd64.tar.gz"
+NOVAPANEL_REPO="https://github.com/lemuel1101/acdepanel"
 NOVAPANEL_CONFIG_DIR="/etc/novapanel"
 NOVAPANEL_DATA_DIR="/var/lib/novapanel"
 NOVAPANEL_LOG_DIR="/var/log/novapanel"
