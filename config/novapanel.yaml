@@ -1,0 +1,40 @@
+server:
+  host: "0.0.0.0"
+  port: 8080
+  panel_port: 2083
+  mode: "release"
+  log_level: "info"
+  frontend_dir: "/var/lib/novapanel/frontend"
+
+database:
+  driver: "sqlite"
+  host: "localhost"
+  port: 5432
+  user: "novapanel"
+  password: ""
+  name: "novapanel"
+  ssl_mode: "disable"
+
+jwt:
+  secret: "change-this-to-a-random-secret"
+  access_token_ttl: 15
+  refresh_token_ttl: 4320
+
+system:
+  nginx_path: "/etc/nginx"
+  nginx_sites_dir: "/etc/nginx/sites-enabled"
+  php_base_dir: "/etc/php"
+  home_dir_prefix: "/home"
+  ssl_cert_dir: "/etc/letsencrypt/live"
+  logs_dir: "/var/log/novapanel"
+  data_dir: "/var/lib/novapanel"
+
+backup:
+  dir: "/var/backups/novapanel"
+  retention_days: 30
+  s3_bucket: ""
+  s3_region: ""
+  s3_access_key: ""
+  s3_secret_key: ""
+
+installed: false

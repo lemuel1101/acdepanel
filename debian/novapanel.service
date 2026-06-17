@@ -1,0 +1,30 @@
+[Unit]
+Description=NovaPanel - Server Control Panel
+After=network.target nginx.service mysql.service postgresql.service
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+
+ExecStart=/usr/local/bin/novapanel
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=10
+
+Environment=NOVAPANEL_CONFIG=/etc/novapanel/config.yaml
+Environment=GIN_MODE=release
+
+StandardOutput=journal
+StandardError=journal
+
+LimitNOFILE=65536
+LimitNPROC=65536
+
+ProtectSystem=full
+ProtectHome=false
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
